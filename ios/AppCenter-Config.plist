@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   AppCenter-Config.plist
+   CapexTracker
+
+   Created by Patryk Ties on 20/12/2021.
+   Copyright (c) 2021 ___ORGANIZATIONNAME___. All rights reserved.
+-->
+<plist version="1.0">
+  <dict>
+      <key>AppSecret</key>
+      <string>e7d533df-1293-42b5-8b2d-dc0c1bc7e2f3</string>
+  <dict/>
+</plist>

@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-capextracker-dev-160954-authRole",
+      "UnauthRoleArn": "arn:aws:iam::426813570066:role/amplify-capextracker-dev-160954-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::426813570066:role/amplify-capextracker-dev-160954-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-capextracker-dev-160954-deployment",
+      "UnauthRoleName": "amplify-capextracker-dev-160954-unauthRole",
+      "StackName": "amplify-capextracker-dev-160954",
+      "StackId": "arn:aws:cloudformation:eu-west-2:426813570066:stack/amplify-capextracker-dev-160954/9b566fc0-6341-11ec-8979-0a22a20f8f60",
+      "AmplifyAppId": "d2bxoe0ujoo4p3"
+    }
+  }
+}

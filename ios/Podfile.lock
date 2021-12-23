@@ -388,6 +388,7 @@ DEPENDENCIES:
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/React/FBReactNativeSpec`)
   - Flipper (= 0.126.0)
+  - Flipper (= 0.99.0)
   - Flipper-Boost-iOSX (= 1.76.0.1.11)
   - Flipper-DoubleConversion (= 3.1.7)
   - Flipper-Fmt (= 7.1.7)
@@ -396,18 +397,31 @@ DEPENDENCIES:
   - Flipper-PeerTalk (= 0.0.4)
   - Flipper-RSocket (= 1.4.3)
   - FlipperKit (= 0.126.0)
+  - FlipperKit (= 0.99.0)
   - FlipperKit/Core (= 0.126.0)
+  - FlipperKit/Core (= 0.99.0)
   - FlipperKit/CppBridge (= 0.126.0)
+  - FlipperKit/CppBridge (= 0.99.0)
   - FlipperKit/FBCxxFollyDynamicConvert (= 0.126.0)
+  - FlipperKit/FBCxxFollyDynamicConvert (= 0.99.0)
   - FlipperKit/FBDefines (= 0.126.0)
+  - FlipperKit/FBDefines (= 0.99.0)
   - FlipperKit/FKPortForwarding (= 0.126.0)
+  - FlipperKit/FKPortForwarding (= 0.99.0)
   - FlipperKit/FlipperKitHighlightOverlay (= 0.126.0)
+  - FlipperKit/FlipperKitHighlightOverlay (= 0.99.0)
   - FlipperKit/FlipperKitLayoutPlugin (= 0.126.0)
+  - FlipperKit/FlipperKitLayoutPlugin (= 0.99.0)
   - FlipperKit/FlipperKitLayoutTextSearchable (= 0.126.0)
+  - FlipperKit/FlipperKitLayoutTextSearchable (= 0.99.0)
   - FlipperKit/FlipperKitNetworkPlugin (= 0.126.0)
+  - FlipperKit/FlipperKitNetworkPlugin (= 0.99.0)
   - FlipperKit/FlipperKitReactPlugin (= 0.126.0)
+  - FlipperKit/FlipperKitReactPlugin (= 0.99.0)
   - FlipperKit/FlipperKitUserDefaultsPlugin (= 0.126.0)
+  - FlipperKit/FlipperKitUserDefaultsPlugin (= 0.99.0)
   - FlipperKit/SKIOSNetworkPlugin (= 0.126.0)
+  - FlipperKit/SKIOSNetworkPlugin (= 0.99.0)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
   - hermes-engine (~> 0.9.0)
   - libevent (~> 2.1.12)
@@ -585,6 +599,6 @@ SPEC CHECKSUMS:
   Yoga: e7dc4e71caba6472ff48ad7d234389b91dadc280
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 5c923f3d96c7577f5b91629759049e6e1a9de0f1
+PODFILE CHECKSUM: 6c2e5d0103066ee51397f2b38c2d6a5a76cbeace
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2

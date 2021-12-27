@@ -1,6 +1,7 @@
 package com.capextracker;
 
 import com.facebook.react.ReactActivity;
+import android.os.Bundle; // react-native-screens package
 
 public class MainActivity extends ReactActivity {
 
@@ -11,5 +12,14 @@ public class MainActivity extends ReactActivity {
   @Override
   protected String getMainComponentName() {
     return "CapexTracker";
+  }
+
+   /**
+   * https://reactnavigation.org/docs/getting-started/
+   * react-native-screens package requires one additional configuration step to properly work on Android devices
+   */
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(null);
   }
 }

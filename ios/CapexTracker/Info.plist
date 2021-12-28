@@ -37,6 +37,19 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SFProDisplay-Black.otf</string>
+		<string>SFProDisplay-Bold.otf</string>
+		<string>SFProDisplay-Heavy.otf</string>
+		<string>SFProDisplay-Light.otf</string>
+		<string>SFProDisplay-Medium.otf</string>
+		<string>SFProDisplay-Regular.otf</string>
+		<string>SFProDisplay-Semibold.otf</string>
+		<string>SFProDisplay-Thin.otf</string>
+		<string>SFProDisplay-Ultralight.otf</string>
+		<string>fonts/FontAwesome.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>

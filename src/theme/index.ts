@@ -10,10 +10,10 @@ import {
 const fonts = {
   ...Platform.select({
     ios: {
-      thin: 'SF Pro Display Thin',
-      regular: 'SF Pro Display Regular',
-      semiBold: 'SF Pro Display Semibold',
-      bold: 'SF Pro Display Bold',
+      thin: 'SFProDisplay-Thin',
+      regular: 'SFProDisplay-Regular',
+      semiBold: 'SFProDisplay-Semibold',
+      bold: 'SFProDisplay-Bold',
     },
     android: {
       thin: 'SFProDisplay-Thin',

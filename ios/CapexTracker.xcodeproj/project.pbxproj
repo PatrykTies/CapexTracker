@@ -8,13 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* CapexTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* CapexTrackerTests.m */; };
+		08D14660813749269383171B /* SF Pro Display Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 766799456FB34A34A13A3AB0 /* SF Pro Display Thin.otf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		262CE4775975410388C6472D /* SF Pro Display Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 560B2B7EB97340C8BBE4220B /* SF Pro Display Semibold.otf */; };
+		2B569986D7244F0FB4AED755 /* SFProDisplay-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7306CD6876CC4BAFB20A1012 /* SFProDisplay-Heavy.otf */; };
+		2E0FDABDEF494BF6882CF0F6 /* SFProDisplay-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 27CA4D7259A147E1B333A7B3 /* SFProDisplay-Light.otf */; };
+		4F20E875525E41AEB2E57140 /* SFProDisplay-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 375353CBCC6D4880BD747FA7 /* SFProDisplay-Thin.otf */; };
+		5C9B5C15D01B4574AC370AD1 /* SFProDisplay-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 583AACC33B2346CBB116004F /* SFProDisplay-Ultralight.otf */; };
+		5D69612AB9814B94B026544C /* SF Pro Display Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E493EA32AB5546A9A5D8A737 /* SF Pro Display Bold.otf */; };
 		6172F2D35A4C3AA820D92908 /* libPods-CapexTracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6423831EA8574132BED9D8CC /* libPods-CapexTracker.a */; };
+		636171852AFF4EAB84A32A8C /* SF Pro Display Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 82E3EFFAC79844F491A8079C /* SF Pro Display Regular.otf */; };
 		7EF68E3733C33B6898317E18 /* libPods-CapexTracker-CapexTrackerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABFE59519B596E51CEFDCCC0 /* libPods-CapexTracker-CapexTrackerTests.a */; };
+		80558A34C0BE417E99BE53B9 /* SFProDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 26D7E133C9774BFFB5CC9934 /* SFProDisplay-Medium.otf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		847286CEBF9F4264AAF39D1A /* SFProDisplay-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CD49BEE76D5E4EF6B8719AC0 /* SFProDisplay-Regular.otf */; };
+		97218D70779644DEA45D92D6 /* SFProDisplay-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A25440CCFD24EDE96D350AC /* SFProDisplay-Semibold.otf */; };
 		9C1CFCFB2770A3B900280151 /* AppCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C1CFCFA2770A3B900280151 /* AppCenter-Config.plist */; };
+		B9325306EC5649339EDB2B98 /* SFProDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9D093A4038E34444A3CF99D3 /* SFProDisplay-Bold.otf */; };
+		CB385F59D0DE4000AF22C26B /* SFProDisplay-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46A6523AB9154B2493ABF2AF /* SFProDisplay-Black.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,13 +51,26 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CapexTracker/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = CapexTracker/main.m; sourceTree = "<group>"; };
 		1D0AE47A65C8663E3B452821 /* Pods-CapexTracker-CapexTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CapexTracker-CapexTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-CapexTracker-CapexTrackerTests/Pods-CapexTracker-CapexTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
+		26D7E133C9774BFFB5CC9934 /* SFProDisplay-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProDisplay-Medium.otf"; path = "../src/assets/fonts/SFProDisplay-Medium.otf"; sourceTree = "<group>"; };
+		27CA4D7259A147E1B333A7B3 /* SFProDisplay-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProDisplay-Light.otf"; path = "../src/assets/fonts/SFProDisplay-Light.otf"; sourceTree = "<group>"; };
+		375353CBCC6D4880BD747FA7 /* SFProDisplay-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProDisplay-Thin.otf"; path = "../src/assets/fonts/SFProDisplay-Thin.otf"; sourceTree = "<group>"; };
+		46A6523AB9154B2493ABF2AF /* SFProDisplay-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProDisplay-Black.otf"; path = "../src/assets/fonts/SFProDisplay-Black.otf"; sourceTree = "<group>"; };
+		560B2B7EB97340C8BBE4220B /* SF Pro Display Semibold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SF Pro Display Semibold.otf"; path = "../src/assets/fonts/SF Pro Display Semibold.otf"; sourceTree = "<group>"; };
+		583AACC33B2346CBB116004F /* SFProDisplay-Ultralight.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProDisplay-Ultralight.otf"; path = "../src/assets/fonts/SFProDisplay-Ultralight.otf"; sourceTree = "<group>"; };
+		5A25440CCFD24EDE96D350AC /* SFProDisplay-Semibold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProDisplay-Semibold.otf"; path = "../src/assets/fonts/SFProDisplay-Semibold.otf"; sourceTree = "<group>"; };
 		6423831EA8574132BED9D8CC /* libPods-CapexTracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CapexTracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C97AB639B58BBB4B15BBE30 /* Pods-CapexTracker-CapexTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CapexTracker-CapexTrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-CapexTracker-CapexTrackerTests/Pods-CapexTracker-CapexTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7306CD6876CC4BAFB20A1012 /* SFProDisplay-Heavy.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProDisplay-Heavy.otf"; path = "../src/assets/fonts/SFProDisplay-Heavy.otf"; sourceTree = "<group>"; };
+		766799456FB34A34A13A3AB0 /* SF Pro Display Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SF Pro Display Thin.otf"; path = "../src/assets/fonts/SF Pro Display Thin.otf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = CapexTracker/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		82E3EFFAC79844F491A8079C /* SF Pro Display Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SF Pro Display Regular.otf"; path = "../src/assets/fonts/SF Pro Display Regular.otf"; sourceTree = "<group>"; };
 		9C1CFCFA2770A3B900280151 /* AppCenter-Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppCenter-Config.plist"; sourceTree = "<group>"; };
+		9D093A4038E34444A3CF99D3 /* SFProDisplay-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProDisplay-Bold.otf"; path = "../src/assets/fonts/SFProDisplay-Bold.otf"; sourceTree = "<group>"; };
 		ABFE59519B596E51CEFDCCC0 /* libPods-CapexTracker-CapexTrackerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CapexTracker-CapexTrackerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0A881CF5CF3F2B244570E2A /* Pods-CapexTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CapexTracker.debug.xcconfig"; path = "Target Support Files/Pods-CapexTracker/Pods-CapexTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		CD49BEE76D5E4EF6B8719AC0 /* SFProDisplay-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProDisplay-Regular.otf"; path = "../src/assets/fonts/SFProDisplay-Regular.otf"; sourceTree = "<group>"; };
 		D00AAFFCFCFDA5787532823F /* Pods-CapexTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CapexTracker.release.xcconfig"; path = "Target Support Files/Pods-CapexTracker/Pods-CapexTracker.release.xcconfig"; sourceTree = "<group>"; };
+		E493EA32AB5546A9A5D8A737 /* SF Pro Display Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SF Pro Display Bold.otf"; path = "../src/assets/fonts/SF Pro Display Bold.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -125,6 +151,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				E233CBF5F47BEE60B243DCF8 /* Pods */,
+				FBAB739A554B4A15B1427B91 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -149,6 +176,27 @@
 				1D0AE47A65C8663E3B452821 /* Pods-CapexTracker-CapexTrackerTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FBAB739A554B4A15B1427B91 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E493EA32AB5546A9A5D8A737 /* SF Pro Display Bold.otf */,
+				82E3EFFAC79844F491A8079C /* SF Pro Display Regular.otf */,
+				560B2B7EB97340C8BBE4220B /* SF Pro Display Semibold.otf */,
+				766799456FB34A34A13A3AB0 /* SF Pro Display Thin.otf */,
+				46A6523AB9154B2493ABF2AF /* SFProDisplay-Black.otf */,
+				9D093A4038E34444A3CF99D3 /* SFProDisplay-Bold.otf */,
+				7306CD6876CC4BAFB20A1012 /* SFProDisplay-Heavy.otf */,
+				27CA4D7259A147E1B333A7B3 /* SFProDisplay-Light.otf */,
+				26D7E133C9774BFFB5CC9934 /* SFProDisplay-Medium.otf */,
+				CD49BEE76D5E4EF6B8719AC0 /* SFProDisplay-Regular.otf */,
+				5A25440CCFD24EDE96D350AC /* SFProDisplay-Semibold.otf */,
+				375353CBCC6D4880BD747FA7 /* SFProDisplay-Thin.otf */,
+				583AACC33B2346CBB116004F /* SFProDisplay-Ultralight.otf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +296,19 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				9C1CFCFB2770A3B900280151 /* AppCenter-Config.plist in Resources */,
+				5D69612AB9814B94B026544C /* SF Pro Display Bold.otf in Resources */,
+				636171852AFF4EAB84A32A8C /* SF Pro Display Regular.otf in Resources */,
+				262CE4775975410388C6472D /* SF Pro Display Semibold.otf in Resources */,
+				08D14660813749269383171B /* SF Pro Display Thin.otf in Resources */,
+				CB385F59D0DE4000AF22C26B /* SFProDisplay-Black.otf in Resources */,
+				B9325306EC5649339EDB2B98 /* SFProDisplay-Bold.otf in Resources */,
+				2B569986D7244F0FB4AED755 /* SFProDisplay-Heavy.otf in Resources */,
+				2E0FDABDEF494BF6882CF0F6 /* SFProDisplay-Light.otf in Resources */,
+				80558A34C0BE417E99BE53B9 /* SFProDisplay-Medium.otf in Resources */,
+				847286CEBF9F4264AAF39D1A /* SFProDisplay-Regular.otf in Resources */,
+				97218D70779644DEA45D92D6 /* SFProDisplay-Semibold.otf in Resources */,
+				4F20E875525E41AEB2E57140 /* SFProDisplay-Thin.otf in Resources */,
+				5C9B5C15D01B4574AC370AD1 /* SFProDisplay-Ultralight.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@ import {ThemeProvider} from '@shopify/restyle';
 import theme from './src/theme';
 
 const App = () => {
-  const isAuthenticated = false;
+  const isAuthenticated = true;
   return (
     <ThemeProvider theme={theme}>
       <StatusBar />

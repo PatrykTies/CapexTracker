@@ -1,5 +1,5 @@
-import _ from 'lodash';
-import React, {Component} from 'react';
+import isEmpty from 'lodash/isEmpty';
+import React, {Component, useCallback} from 'react';
 import {
   Platform,
   Alert,
@@ -44,56 +44,15 @@ export default class ExpandableCalendarScreen extends Component<Props> {
     // console.warn('ExpandableCalendarScreen onMonthChange: ', month, updateSource);
   };
 
-  buttonPressed() {
-    Alert.alert('show more');
-  }
-
-  itemPressed(id: string) {
-    Alert.alert(id);
-  }
-
-  renderEmptyItem() {
-    return (
-      <View style={styles.emptyItem}>
-        <Text style={styles.emptyItemText}>No Events Planned</Text>
-      </View>
-    );
-  }
-
   renderItem = ({item}: any) => {
-    if (_.isEmpty(item)) {
-      return this.renderEmptyItem();
-    }
-
-    return (
-      <TouchableOpacity
-        onPress={() => this.itemPressed(item.title)}
-        style={styles.item}
-        testID={testIDs.agenda.ITEM}>
-        <View>
-          <Text style={styles.itemHourText}>{item.hour}</Text>
-          <Text style={styles.itemDurationText}>{item.duration}</Text>
-        </View>
-        <Card
-          variant="shadow_md"
-          justifyContent="center"
-          alignItems="center"
-          backgroundColor="yellow">
-          <Text style={styles.itemTitleText}>{item.title}</Text>
-        </Card>
-
-        <View style={styles.itemButtonContainer}>
-          <Button color={'grey'} title={'Edit'} onPress={this.buttonPressed} />
-        </View>
-      </TouchableOpacity>
-    );
+    return <AgendaItem item={item} />;
   };
 
   getMarkedDates = () => {
     const marked: any = {};
     data.forEach(item => {
       // NOTE: only mark dates with data
-      if (item.data && item.data.length > 0 && !_.isEmpty(item.data[0])) {
+      if (item.data && item.data.length > 0 && !isEmpty(item.data[0])) {
         marked[item.title] = {marked: true};
       } else {
         marked[item.title] = {disabled: true};
@@ -195,6 +154,53 @@ export default class ExpandableCalendarScreen extends Component<Props> {
     );
   }
 }
+
+interface ItemProps {
+  item: any;
+}
+
+const AgendaItem = React.memo(function AgendaItem(props: ItemProps) {
+  const {item} = props;
+
+  const buttonPressed = useCallback(() => {
+    Alert.alert('Show me more');
+  }, []);
+
+  const itemPressed = useCallback(() => {
+    Alert.alert(item.title);
+  }, []);
+
+  if (isEmpty(item)) {
+    return (
+      <View style={styles.emptyItem}>
+        <Text style={styles.emptyItemText}>No Events Planned Today</Text>
+      </View>
+    );
+  }
+
+  return (
+    <TouchableOpacity
+      onPress={itemPressed}
+      style={styles.item}
+      testID={testIDs.agenda.ITEM}>
+      <View>
+        <Text style={styles.itemHourText}>{item.hour}</Text>
+        <Text style={styles.itemDurationText}>{item.duration}</Text>
+      </View>
+      <Card
+        variant="shadow_md"
+        justifyContent="center"
+        alignItems="center"
+        backgroundColor="yellow">
+        <Text style={styles.itemTitleText}>{item.title}</Text>
+      </Card>
+
+      <View style={styles.itemButtonContainer}>
+        <Button color={'grey'} title={'Edit'} onPress={buttonPressed} />
+      </View>
+    </TouchableOpacity>
+  );
+});
 
 const styles = StyleSheet.create({
   calendar: {

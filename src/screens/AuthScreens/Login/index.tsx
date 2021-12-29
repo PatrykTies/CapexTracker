@@ -54,7 +54,7 @@ const Login = ({navigation}: any) => {
           />
           <Box style={styles.screenContainer}>
             <Text variant="h1" paddingBottom="xl">
-              Hello <Text variant="h1_deco">make waves</Text>
+              Keep calm and <Text variant="h1_deco">make waves</Text>
             </Text>
             <Card
               variant="shadow_md"

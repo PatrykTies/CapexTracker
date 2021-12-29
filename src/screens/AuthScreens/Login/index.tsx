@@ -89,7 +89,7 @@ const Login = ({navigation}: any) => {
                 returnKeyType="go"
                 returnKeyLabel="Finish"
                 secureTextEntry
-                onSubmitEditing={() => handleSubmit()}
+                onSubmitEditing={handleSubmit}
               />
               <Box
                 flexDirection="row"

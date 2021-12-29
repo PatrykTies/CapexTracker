@@ -13,7 +13,6 @@
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/native-stack": "^6.2.5",
     "@shopify/restyle": "^1.6.1",
-    "@types/react-native-calendars": "^1.1264.3",
     "@types/react-native-vector-icons": "^6.4.10",
     "appcenter": "4.3.0",
     "appcenter-analytics": "4.3.0",

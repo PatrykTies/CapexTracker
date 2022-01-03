@@ -1,4 +1,6 @@
 import {getPastDate, getFutureDates} from './calendarUtils';
+import {format, addDays} from 'date-fns';
+
 const today = new Date().toISOString().split('T')[0];
 const fastDate = getPastDate(0); //was 3
 const futureDates = getFutureDates(9);
@@ -67,3 +69,5 @@ export const data = [
     data: [{hour: '12am', duration: '1h', title: 'Last Yoga'}],
   },
 ];
+
+

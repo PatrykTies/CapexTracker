@@ -6,7 +6,7 @@ import Signup from '../screens/AuthScreens/Signup';
 
 const AuthenticationStack = createNativeStackNavigator();
 
-const AuthenticationNavigator = () => {
+const LoggedOutScreens = () => {
   return (
     <AuthenticationStack.Navigator screenOptions={{headerShown: false}}>
       <AuthenticationStack.Screen name="Login" component={Login} />
@@ -19,4 +19,4 @@ const AuthenticationNavigator = () => {
   );
 };
 
-export default AuthenticationNavigator;
+export default LoggedOutScreens;

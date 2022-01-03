@@ -18,6 +18,7 @@ import {
   CalendarProvider,
   WeekCalendar,
 } from 'react-native-calendars';
+import {format, addDays} from 'date-fns';
 import {Text as ThemeText, Box, Card} from '../../../theme';
 
 // data
@@ -48,9 +49,32 @@ export default class ExpandableCalendarScreen extends Component<Props> {
     return <AgendaItem item={item} />;
   };
 
+  getData = () => {
+    const weeks = 55;
+
+    const data2 = [
+      {
+        title: '2021-12-31',
+        data: [{hour: '4', duration: 'Worked on bugs', title: 'ADD'}],
+      },
+    ];
+
+    [...Array(weeks)].forEach((_, i): any => {
+      const addays = addDays(new Date(data2[i].title), 7);
+      const newdat2e = format(addays, 'yyyy-MM-dd');
+      const newitem = {
+        title: newdat2e,
+        data: [{hour: '4', duration: 'Worked on bugs', title: 'ADD'}],
+      };
+      data2.push(newitem);
+    });
+
+    return data2;
+  };
+
   getMarkedDates = () => {
     const marked: any = {};
-    data.forEach(item => {
+    this.getData().forEach(item => {
       // NOTE: only mark dates with data
       if (item.data && item.data.length > 0 && !isEmpty(item.data[0])) {
         marked[item.title] = {marked: true};
@@ -105,7 +129,7 @@ export default class ExpandableCalendarScreen extends Component<Props> {
           wHeight - (Platform.OS === 'android' ? StatusBar.currentHeight : 0)
         }>
         <CalendarProvider
-          date={data[0].title}
+          date={this.getData()[0].title}
           onDateChanged={this.onDateChanged}
           onMonthChange={this.onMonthChange}
           showTodayButton
@@ -144,7 +168,7 @@ export default class ExpandableCalendarScreen extends Component<Props> {
             />
           )}
           <AgendaList
-            sections={data}
+            sections={this.getData()}
             extraData={this.state}
             renderItem={this.renderItem}
             // sectionStyle={styles.section}

@@ -13,3 +13,13 @@ export function getFutureDates(days: number) {
 export function getPastDate(days: number) {
   return new Date(Date.now() - 864e5 * days).toISOString().split('T')[0];
 }
+
+// function getDayName(dateStr, locale) {
+//   var date = new Date(dateStr);
+//   return date.toLocaleDateString(locale, { weekday: 'long' });
+// }
+
+// //const newdate = format(new Date(2021, 12 - 1, 31), 'yyyy-MM-dd');
+
+// var dateStr = '2023-01-20';
+// var day = getDayName(dateStr, 'en-GB');

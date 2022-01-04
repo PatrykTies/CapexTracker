@@ -7,7 +7,10 @@ import {
   Image,
   Dimensions,
   Platform,
+  Alert,
 } from 'react-native';
+import {useDispatch} from 'react-redux';
+import * as authAction from '../../../redux/actions/authAction';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
@@ -27,10 +30,11 @@ const LoginSchema = Yup.object().shape({
 const {width, height: wHeight} = Dimensions.get('window');
 
 const Login = ({navigation}: any) => {
+  const dispatch = useDispatch();
   const password = useRef(null);
   const inputChangeHandler = () => {};
-  const submitHandler = () => {
-    console.log('asdads');
+  const submitHandler = (values: any) => {
+    dispatch(authAction.loginUser(values));
   };
   const {handleChange, handleBlur, handleSubmit, values, errors, touched} =
     useFormik({

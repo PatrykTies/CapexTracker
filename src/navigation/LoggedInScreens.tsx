@@ -3,7 +3,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import ExpandableCalendar from '../screens/UserScreens/Home';
 const MainStack = createNativeStackNavigator();
 
-const AdminNavigator = (props: any) => {
+const LoggedInScreens = (props: any) => {
   return (
     <MainStack.Navigator screenOptions={{headerShown: false}}>
       <MainStack.Screen name="UserHome" component={ExpandableCalendar} />
@@ -11,4 +11,4 @@ const AdminNavigator = (props: any) => {
   );
 };
 
-export default AdminNavigator;
+export default LoggedInScreens;

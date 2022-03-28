@@ -141,4 +141,5 @@ export const Card = createRestyleComponent(
   Box,
 );
 
+export type Theme = typeof theme;
 export default theme;

@@ -1,12 +1,13 @@
 import React from 'react';
-import {TouchableOpacity} from 'react-native';
-import {useRestyle, spacing, border, backgroundColor} from '@shopify/restyle';
 import {BorderlessButton} from 'react-native-gesture-handler';
-import {Text, Box} from '../../theme';
+import {Text} from '../../theme';
 
-const restyleFunctions = [spacing, border, backgroundColor];
+type LinkButtonProps = {
+  onPress: () => void;
+  label: string;
+};
 
-const LinkButton = ({onPress, label, ...rest}: any) => {
+const LinkButton: React.FC<LinkButtonProps> = ({onPress, label}) => {
   return (
     <BorderlessButton onPress={onPress}>
       <Text variant="cta" color="textDecorated">

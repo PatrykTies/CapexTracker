@@ -5,7 +5,7 @@ import {Card, Box, Text} from '../../theme';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const TextField = forwardRef(
-  ({icon, label, error, touched, ...props}: any, ref): any => {
+  ({icon, label, error, touched, ...props}: any, ref) => {
     const {colors, fontSize} = useTheme();
     return (
       <Box

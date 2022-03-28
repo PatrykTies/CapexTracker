@@ -1,16 +1,31 @@
 import React from 'react';
-import {TouchableOpacity} from 'react-native';
-import {useRestyle, spacing, border, backgroundColor} from '@shopify/restyle';
+import {Pressable} from 'react-native';
+import {
+  useRestyle,
+  spacing,
+  border,
+  backgroundColor,
+  SpacingProps,
+  BackgroundColorProps,
+  BorderProps,
+} from '@shopify/restyle';
 
-import {Text, Box} from '../../theme';
+import {Text, Box, Theme} from '../../theme';
 
 const restyleFunctions = [spacing, border, backgroundColor];
 
-const Button = ({onPress, label, ...rest}) => {
+type ButtonProps = SpacingProps<Theme> &
+  BorderProps<Theme> &
+  BackgroundColorProps<Theme> & {
+    onPress: () => void;
+    label: string;
+  };
+
+const Button: React.FC<ButtonProps> = ({onPress, label, ...rest}) => {
   const props = useRestyle(restyleFunctions, rest);
 
   return (
-    <TouchableOpacity onPress={onPress}>
+    <Pressable onPress={onPress}>
       <Box
         {...props}
         borderWidth={1}
@@ -25,7 +40,7 @@ const Button = ({onPress, label, ...rest}) => {
           {label}
         </Text>
       </Box>
-    </TouchableOpacity>
+    </Pressable>
   );
 };
 

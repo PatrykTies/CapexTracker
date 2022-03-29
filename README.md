@@ -1,6 +1,12 @@
 # CapexTracker
 
-Employee capex tracking app - Android and iOS
+Capex tracking made easy.
+Features calendar view, authentication, lists, capex analytics, admin dashboard, push notifications.
+Available on App Store and Google Play soon!
+
+### Supported versions
+
+Android 5+ and iOS 11+
 
 ## Build status
 
@@ -10,7 +16,7 @@ iOS
 Android
 [![Build status](https://build.appcenter.ms/v0.1/apps/76b2ec5f-da50-4892-bbe3-106ad1ab9afc/branches/dev/badge)](https://appcenter.ms)
 
-## Before you start - Install dependancies
+## Before you begin - Install dependancies
 
 ```bash
 cd CapexTracker
@@ -28,16 +34,23 @@ npm run android
 
 ## Technologies
 
-React Native 0.67+ supporting iOS 11+
-[React Native](https://reactnative.dev/)
-Written in:
-[Typescript](https://reactnative.dev/)
-Styled with:
-[Restyle](https://reactnative.dev/)
-Fetching made with:
-[React Native](https://reactnative.dev/)
-State managed with:
-[Redux](https://reactnative.dev/)
+[ReactNative](https://reactnative.dev/) 0.67+ supporting iOS 11+
+| Written in:
+[Typescript](https://www.typescriptlang.org/)
+| Styled with:
+[Restyle](https://github.com/Shopify/restyle)
+| Fetching made with:
+[ReactQuery](https://react-query.tanstack.com/)
+| State managed with:
+[Redux](https://redux.js.org/)
+| Forms handled by:
+[Formik](https://formik.org/)
+| CI/CD made with:
+[AppCenter](https://appcenter.ms)
+| GraphQL CMS used:
+[GraphCMS](https://graphcms.com/)
+
+# SETUP HELP
 
 ## Android studio install guide
 

@@ -1,14 +1,22 @@
 import React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+// Screens
 import Login from '../screens/AuthScreens/Login';
 import ResetPassword from '../screens/AuthScreens/ResetPassword';
 import Signup from '../screens/AuthScreens/Signup';
 
-const AuthenticationStack = createNativeStackNavigator();
+type AuthParamList = {
+  Login: undefined;
+  ResetPassword: undefined;
+  Signup: undefined;
+};
+
+const AuthenticationStack = createNativeStackNavigator<AuthParamList>();
 
 const LoggedOutScreens = () => {
   return (
-    <AuthenticationStack.Navigator screenOptions={{headerShown: false}}>
+    <AuthenticationStack.Navigator screenOptions={{ headerShown: false }}>
       <AuthenticationStack.Screen name="Login" component={Login} />
       <AuthenticationStack.Screen
         name="ResetPassword"

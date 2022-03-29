@@ -1,4 +1,4 @@
-// import {BASE_URL} from 'react-native-dotenv';
+// TODO: move api endpoint to .env file
 const BASE_URL = 'https://www.makewavez.app/api';
 export const LOGIN_USER_SUCCESS = 'LOGIN_USER_SUCCESS';
 export const LOGIN_USER_FAILURE = 'LOGIN_USER_FAILURE';
@@ -8,7 +8,7 @@ type AuthProps = {
   password: string;
 };
 
-export const loginUser = ({email, password}: AuthProps) => {
+export const loginUser = ({ email, password }: AuthProps) => {
   return async (dispatch: any) => {
     const result = await fetch(`${BASE_URL}/signin`, {
       method: 'POST',

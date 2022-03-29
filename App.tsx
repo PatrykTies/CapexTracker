@@ -1,8 +1,8 @@
 import React from 'react';
-import {StatusBar} from 'react-native';
-import {Provider} from 'react-redux';
-import {ThemeProvider} from '@shopify/restyle';
-import store from './src/redux/store';
+import { StatusBar } from 'react-native';
+import { Provider } from 'react-redux';
+import { ThemeProvider } from '@shopify/restyle';
+import store from './src/services/storage/redux/store';
 import theme from './src/theme';
 import AppScreens from './src/navigation';
 

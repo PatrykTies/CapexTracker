@@ -1,6 +1,8 @@
 # CapexTracker
 
-Employee capex tracking app - Android and IOS
+Employee capex tracking app - Android and iOS
+
+## Build status
 
 iOS
 [![Build status](https://build.appcenter.ms/v0.1/apps/5951e6b9-242f-4fd2-8be6-0657dd95ab15/branches/dev/badge)](https://appcenter.ms)
@@ -8,16 +10,34 @@ iOS
 Android
 [![Build status](https://build.appcenter.ms/v0.1/apps/76b2ec5f-da50-4892-bbe3-106ad1ab9afc/branches/dev/badge)](https://appcenter.ms)
 
-# Before start - Install dependancies
+## Before you start - Install dependancies
 
-npm i
+```bash
+cd CapexTracker
+npm install
 cd ios & pod install
+```
 
-# To start - use 3 separte terminals
+## To start - use 3 separte terminals
 
+```bash
 npx react-native start
 npm run ios
 npm run android
+```
+
+## Technologies
+
+React Native 0.67+ supporting iOS 11+
+[React Native](https://reactnative.dev/)
+Written in:
+[Typescript](https://reactnative.dev/)
+Styled with:
+[Restyle](https://reactnative.dev/)
+Fetching made with:
+[React Native](https://reactnative.dev/)
+State managed with:
+[Redux](https://reactnative.dev/)
 
 ## Android studio install guide
 
@@ -76,7 +96,7 @@ https://medium.com/@aravindmnair/add-custom-fonts-to-react-native-0-60-easily-in
 
 [apache-2.0](https://choosealicense.com/licenses/apache-2.0/)
 
-# Known issues
+## Troubleshooting
 
 1.Fonts conflict with react-native-icons 2. Android read fonts in fontFamily from file name
 iOS read fonts in fontFamily from font name, NOT A FILENAME

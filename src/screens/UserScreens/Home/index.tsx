@@ -1,5 +1,5 @@
 import isEmpty from 'lodash/isEmpty';
-import React, {Component, useCallback} from 'react';
+import React, { Component, useCallback } from 'react';
 import {
   Platform,
   Alert,
@@ -18,15 +18,15 @@ import {
   CalendarProvider,
   WeekCalendar,
 } from 'react-native-calendars';
-import {format, addDays} from 'date-fns';
-import {Text as ThemeText, Box, Card} from '../../../theme';
+import { format, addDays } from 'date-fns';
+import { Text as ThemeText, Box, Card } from '../../../theme';
 
 // data
-import {data} from './dataItems';
-import {markedWeeks} from './weeks';
+import { data } from './dataItems';
+import { markedWeeks } from './weeks';
 
 // config
-import {testIDs} from './calendarConfig';
+import { testIDs } from './calendarConfig';
 
 const themeColor = '#00AAAF';
 const lightThemeColor = 'rgb(235, 249, 249)';
@@ -45,7 +45,7 @@ export default class ExpandableCalendarScreen extends Component<Props> {
     // console.warn('ExpandableCalendarScreen onMonthChange: ', month, updateSource);
   };
 
-  renderItem = ({item}: any) => {
+  renderItem = ({ item }: any) => {
     return <AgendaItem item={item} />;
   };
 
@@ -55,7 +55,7 @@ export default class ExpandableCalendarScreen extends Component<Props> {
     const data2 = [
       {
         title: '2021-12-31',
-        data: [{hour: '4', duration: 'Worked on bugs', title: 'ADD'}],
+        data: [{ hour: '4', duration: 'Worked on bugs', title: 'ADD' }],
       },
     ];
 
@@ -64,7 +64,7 @@ export default class ExpandableCalendarScreen extends Component<Props> {
       const newdat2e = format(addays, 'yyyy-MM-dd');
       const newitem = {
         title: newdat2e,
-        data: [{hour: '4', duration: 'Worked on bugs', title: 'ADD'}],
+        data: [{ hour: '4', duration: 'Worked on bugs', title: 'ADD' }],
       };
       data2.push(newitem);
     });
@@ -77,9 +77,9 @@ export default class ExpandableCalendarScreen extends Component<Props> {
     this.getData().forEach(item => {
       // NOTE: only mark dates with data
       if (item.data && item.data.length > 0 && !isEmpty(item.data[0])) {
-        marked[item.title] = {marked: true};
+        marked[item.title] = { marked: true };
       } else {
-        marked[item.title] = {disabled: true};
+        marked[item.title] = { disabled: true };
       }
     });
     return marked;
@@ -91,7 +91,7 @@ export default class ExpandableCalendarScreen extends Component<Props> {
     return {
       // arrows
       arrowColor: 'black',
-      arrowStyle: {padding: 0},
+      arrowStyle: { padding: 0 },
       // month
       monthTextColor: 'black',
       textMonthFontSize: 16,
@@ -107,7 +107,7 @@ export default class ExpandableCalendarScreen extends Component<Props> {
       textDayFontSize: 18,
       textDayFontFamily: 'HelveticaNeue',
       textDayFontWeight: '500',
-      textDayStyle: {marginTop: Platform.OS === 'android' ? 2 : 4},
+      textDayStyle: { marginTop: Platform.OS === 'android' ? 2 : 4 },
       // selected date
       selectedDayBackgroundColor: themeColor,
       selectedDayTextColor: 'white',
@@ -117,12 +117,12 @@ export default class ExpandableCalendarScreen extends Component<Props> {
       dotColor: themeColor,
       selectedDotColor: 'white',
       disabledDotColor: disabledColor,
-      dotStyle: {marginTop: -2},
+      dotStyle: { marginTop: -2 },
     };
   };
 
   render() {
-    const {width, height: wHeight} = Dimensions.get('window');
+    const { width, height: wHeight } = Dimensions.get('window');
     return (
       <SafeAreaView
         height={
@@ -184,7 +184,7 @@ interface ItemProps {
 }
 
 const AgendaItem = React.memo(function AgendaItem(props: ItemProps) {
-  const {item} = props;
+  const { item } = props;
 
   const buttonPressed = useCallback(() => {
     Alert.alert('Show me more');

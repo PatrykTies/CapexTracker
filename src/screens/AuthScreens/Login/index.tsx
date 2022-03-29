@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, { useRef } from 'react';
 import {
   StatusBar,
   StyleSheet,
@@ -9,15 +9,15 @@ import {
   Platform,
   Alert,
 } from 'react-native';
-import {useDispatch} from 'react-redux';
-import * as authAction from '../../../redux/actions/authAction';
-import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
-import {useFormik} from 'formik';
+import { useDispatch } from 'react-redux';
+import * as authAction from '../../../services/storage/redux/actions/authAction';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import Button from '../../../components/atoms/Button';
 import LinkButton from '../../../components/atoms/LinkButton';
 import TextField from '../../../components/atoms/TextField';
-import {Card, Box, Text} from '../../../theme';
+import { Card, Box, Text } from '../../../theme';
 
 const LoginSchema = Yup.object().shape({
   email: Yup.string().email('Keep on typing your email.').required('Required'),
@@ -27,18 +27,18 @@ const LoginSchema = Yup.object().shape({
     .required('Required'),
 });
 
-const {width, height: wHeight} = Dimensions.get('window');
+const { width, height: wHeight } = Dimensions.get('window');
 
-const Login = ({navigation}: any) => {
+const Login = ({ navigation }: any) => {
   const dispatch = useDispatch();
   const password = useRef(null);
   const inputChangeHandler = () => {};
   const submitHandler = (values: any) => {
     dispatch(authAction.loginUser(values));
   };
-  const {handleChange, handleBlur, handleSubmit, values, errors, touched} =
+  const { handleChange, handleBlur, handleSubmit, values, errors, touched } =
     useFormik({
-      initialValues: {email: '', password: ''},
+      initialValues: { email: '', password: '' },
       validationSchema: LoginSchema,
       onSubmit: v => submitHandler(v),
     });
@@ -47,7 +47,7 @@ const Login = ({navigation}: any) => {
     <KeyboardAwareScrollView scrollEnabled={false}>
       <SafeAreaView
         height={
-          wHeight - (Platform.OS === 'android' ? StatusBar.currentHeight : 0)
+          wHeight - (Platform?.OS === 'android' ? StatusBar?.currentHeight : 0)
         }>
         <ImageBackground
           source={require('../../../assets/homepage_hero_375.jpg')}

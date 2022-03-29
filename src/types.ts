@@ -1,4 +1,4 @@
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 // https://reactnavigation.org/docs/typescript
 export type AuthNavigatorParamList = {
   Login: undefined;

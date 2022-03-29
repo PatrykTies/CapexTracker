@@ -1,12 +1,19 @@
 import React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import ExpandableCalendar from '../screens/UserScreens/Home';
-const MainStack = createNativeStackNavigator();
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-const LoggedInScreens = (props: any) => {
+// Screens
+import Home from '../screens/UserScreens/Home';
+
+type RootStackParamList = {
+  Home: undefined;
+};
+
+const MainStack = createNativeStackNavigator<RootStackParamList>();
+
+const LoggedInScreens = () => {
   return (
-    <MainStack.Navigator screenOptions={{headerShown: false}}>
-      <MainStack.Screen name="UserHome" component={ExpandableCalendar} />
+    <MainStack.Navigator screenOptions={{ headerShown: false }}>
+      <MainStack.Screen name="Home" component={Home} />
     </MainStack.Navigator>
   );
 };

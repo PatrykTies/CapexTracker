@@ -4,8 +4,16 @@ import { NavigationContainer } from '@react-navigation/native';
 import LoggedInScreens from './LoggedInScreens';
 import LoggedOutScreens from './LoggedOutScreens';
 
+type AuthState = {
+  auth: {
+    isAuthenticated: boolean;
+  };
+};
+
 const AppScreensNavigation = () => {
-  const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
+  const isAuthenticated = useSelector<AuthState>(
+    state => state.auth.isAuthenticated,
+  );
 
   return (
     <NavigationContainer>

@@ -1,12 +1,20 @@
-import React, {forwardRef} from 'react';
-import {TextInput} from 'react-native';
-import {useTheme} from '@shopify/restyle';
-import {Card, Box, Text} from '../../theme';
+import React, { forwardRef } from 'react';
+import { TextInput, TextInputProps as RNTextInputProps } from 'react-native';
+import { useTheme } from '@shopify/restyle';
+import { Card, Box, Text } from '../../theme';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-const TextField = forwardRef(
-  ({icon, label, error, touched, ...props}: any, ref) => {
-    const {colors, fontSize} = useTheme();
+interface TextInputProps extends RNTextInputProps {
+  icon: string;
+  touched?: boolean;
+  error?: string;
+  label?: string;
+  autoCompleteType: string;
+}
+
+const TextField = forwardRef<TextInput, TextInputProps>(
+  ({ icon, label, error, touched, ...props }, ref) => {
+    const { colors, fontSize } = useTheme();
     return (
       <Box
         width="100%"
@@ -24,7 +32,7 @@ const TextField = forwardRef(
           </Box>
           <TextInput
             {...props}
-            {...{ref}}
+            {...{ ref }}
             underlineColorAndroid="transparent"
             style={{
               flex: 1,

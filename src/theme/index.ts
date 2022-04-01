@@ -1,10 +1,11 @@
-import {Platform} from 'react-native';
+import { Platform } from 'react-native';
 import {
   createTheme,
   createBox,
   createText,
   createRestyleComponent,
   createVariant,
+  VariantProps,
 } from '@shopify/restyle';
 
 const fonts = {
@@ -72,14 +73,14 @@ const theme = createTheme({
   cardVariants: {
     shadow_md: {
       shadowColor: 'black',
-      shadowOffset: {width: 0, height: 2},
+      shadowOffset: { width: 0, height: 2 },
       shadowRadius: 6,
       shadowOpacity: 0.26,
       elevation: 10,
     },
     shadow_s: {
       shadowColor: 'shadow',
-      shadowOffset: {width: 0, height: 2},
+      shadowOffset: { width: 0, height: 2 },
       shadowRadius: 3,
       shadowOpacity: 0.26,
       elevation: 6,
@@ -134,12 +135,13 @@ const theme = createTheme({
   },
 });
 
-export const Box = createBox();
-export const Text = createText();
-export const Card = createRestyleComponent(
-  [createVariant({themeKey: 'cardVariants'})],
-  Box,
-);
-
 export type Theme = typeof theme;
+export const Box = createBox<Theme>();
+export const Text = createText<Theme>();
+
+export const Card = createRestyleComponent<
+  VariantProps<Theme, 'cardVariants'> & React.ComponentProps<typeof Box>,
+  Theme
+>([createVariant({ themeKey: 'cardVariants' })], Box);
+
 export default theme;

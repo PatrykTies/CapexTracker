@@ -4,11 +4,15 @@ Capex tracking made easy.
 Features calendar view, authentication, lists, capex analytics, admin dashboard, push notifications.
 Available on App Store and Google Play soon!
 
+### Version
+
+v0.7
+
 ### Supported versions
 
 Android 5+ and iOS 11+
 
-## Build status
+### Build status
 
 iOS
 [![Build status](https://build.appcenter.ms/v0.1/apps/5951e6b9-242f-4fd2-8be6-0657dd95ab15/branches/dev/badge)](https://appcenter.ms)

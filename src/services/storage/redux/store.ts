@@ -10,7 +10,10 @@ const rootReducer = combineReducers({
 
 const middleware = composeWithDevTools(applyMiddleware(thunk));
 
-export default createStore(rootReducer, middleware);
+const store = createStore(rootReducer, middleware);
+
+export default store;
+
 // Infer the `RootState` and `AppDispatch` types from the store itself
 export type RootState = ReturnType<typeof store.getState>;
 // Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}

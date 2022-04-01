@@ -1,48 +1,48 @@
 export const markedWeeks = {
-  '2021-03-29': {
+  '2022-04-29': {
     selected: true,
     startingDay: true,
     color: 'lightgrey',
   },
-  '2021-03-30': {
+  '2022-04-30': {
     selected: true,
     color: 'lightgrey',
   },
-  '2021-03-31': {
+  '2022-03-31': {
     selected: true,
     color: 'lightgrey',
   },
-  '2021-04-01': {
+  '2022-04-01': {
     selected: true,
     color: 'lightgrey',
   },
-  '2021-04-02': {
+  '2022-04-02': {
     selected: true,
     color: 'lightgrey',
   },
-  '2021-04-03': {
+  '2022-04-03': {
     selected: true,
     color: 'lightgrey',
   },
-  '2021-04-04': {
+  '2022-04-04': {
     selected: true,
     endingDay: true,
     color: 'lightgrey',
   },
-  '2021-04-05': {
+  '2022-04-05': {
     selected: true,
     startingDay: true,
     color: '#f6b688',
   },
-  '2021-04-06': {
+  '2022-04-06': {
     selected: true,
     color: '#f6b688',
   },
-  '2021-04-07': {
+  '2022-04-07': {
     selected: true,
     color: '#f6b688',
   },
-  '2021-04-08': {
+  '2022-04-08': {
     selected: true,
     color: '#f6b688',
   },

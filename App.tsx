@@ -5,15 +5,17 @@ import { ThemeProvider } from '@shopify/restyle';
 import store from './src/services/storage/redux/store';
 import theme from './src/theme';
 import AppScreens from './src/navigation';
+import ErrorBoundary from './src/components/organisms/ErrorBoundary';
 
 const App = () => {
-  const isAuthenticated = true;
   return (
     <ThemeProvider theme={theme}>
-      <StatusBar />
-      <Provider store={store}>
-        <AppScreens />
-      </Provider>
+      <ErrorBoundary>
+        <StatusBar />
+        <Provider store={store}>
+          <AppScreens />
+        </Provider>
+      </ErrorBoundary>
     </ThemeProvider>
   );
 };

@@ -1,4 +1,6 @@
 import React, { useRef } from 'react';
+
+// Components
 import {
   StatusBar,
   StyleSheet,
@@ -7,17 +9,24 @@ import {
   Image,
   Dimensions,
   Platform,
-  Alert,
+  TextInput,
 } from 'react-native';
-import { useDispatch } from 'react-redux';
-import * as authAction from '../../../services/storage/redux/actions/authAction';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
 import Button from '../../../components/atoms/Button';
 import LinkButton from '../../../components/atoms/LinkButton';
 import TextField from '../../../components/atoms/TextField';
 import { Card, Box, Text } from '../../../theme';
+
+// Storage
+import { useDispatch } from 'react-redux';
+import * as authAction from '../../../services/storage/redux/actions/authAction';
+
+// Libs
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+
+// Types
+import { AuthNavigationProps } from '../../../navigation/LoggedOutScreens';
 
 const LoginSchema = Yup.object().shape({
   email: Yup.string().email('Keep on typing your email.').required('Required'),
@@ -29,26 +38,38 @@ const LoginSchema = Yup.object().shape({
 
 const { width, height: wHeight } = Dimensions.get('window');
 
-const Login = ({ navigation }: any) => {
+type User = {
+  email: string;
+  password: string;
+};
+
+const Login = ({ navigation }: AuthNavigationProps<'Login'>) => {
   const dispatch = useDispatch();
-  const password = useRef(null);
-  const inputChangeHandler = () => {};
-  const submitHandler = (values: any) => {
+  const password = useRef<TextInput>(null);
+
+  const submitHandler = (values: User) => {
     dispatch(authAction.loginUser(values));
   };
+
+  const initialFormValues: User = { email: '', password: '' };
+
   const { handleChange, handleBlur, handleSubmit, values, errors, touched } =
     useFormik({
-      initialValues: { email: '', password: '' },
+      initialValues: initialFormValues,
       validationSchema: LoginSchema,
-      onSubmit: v => submitHandler(v),
+      onSubmit: (v: User) => submitHandler(v),
     });
+
+  const statusBarHeight = (): number => {
+    if (Platform?.OS === 'android' && StatusBar?.currentHeight !== undefined) {
+      return StatusBar?.currentHeight;
+    }
+    return 0;
+  };
 
   return (
     <KeyboardAwareScrollView scrollEnabled={false}>
-      <SafeAreaView
-        height={
-          wHeight - (Platform?.OS === 'android' ? StatusBar?.currentHeight : 0)
-        }>
+      <SafeAreaView style={{ height: wHeight - statusBarHeight() }}>
         <ImageBackground
           source={require('../../../assets/homepage_hero_375.jpg')}
           style={styles.bgimage}>

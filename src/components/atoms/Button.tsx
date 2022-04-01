@@ -1,5 +1,5 @@
 import React from 'react';
-import {Pressable} from 'react-native';
+import { Pressable } from 'react-native';
 import {
   useRestyle,
   spacing,
@@ -10,7 +10,7 @@ import {
   BorderProps,
 } from '@shopify/restyle';
 
-import {Text, Box, Theme} from '../../theme';
+import { Text, Box, Theme } from '../../theme';
 
 const restyleFunctions = [spacing, border, backgroundColor];
 
@@ -19,9 +19,10 @@ type ButtonProps = SpacingProps<Theme> &
   BackgroundColorProps<Theme> & {
     onPress: () => void;
     label: string;
+    variant: string;
   };
 
-const Button: React.FC<ButtonProps> = ({onPress, label, ...rest}) => {
+const Button: React.FC<ButtonProps> = ({ onPress, label, ...rest }) => {
   const props = useRestyle(restyleFunctions, rest);
 
   return (

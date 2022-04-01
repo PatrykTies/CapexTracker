@@ -1,0 +1,7 @@
+// FROM: https://kulshekhar.github.io/ts-jest/docs/guides/react-native/
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+      "jsx": "react"
+    }
+  }

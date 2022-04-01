@@ -1,5 +1,9 @@
 import React from 'react';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {
+  createNativeStackNavigator,
+  NativeStackScreenProps,
+} from '@react-navigation/native-stack';
+import { RouteProp } from '@react-navigation/native';
 
 // Screens
 import Login from '../screens/AuthScreens/Login';
@@ -11,6 +15,11 @@ type AuthParamList = {
   ResetPassword: undefined;
   Signup: undefined;
 };
+
+export interface AuthNavigationProps<RouteName extends keyof AuthParamList> {
+  navigation: NativeStackScreenProps<AuthParamList, RouteName>;
+  route: RouteProp<AuthParamList, RouteName>;
+}
 
 const AuthenticationStack = createNativeStackNavigator<AuthParamList>();
 

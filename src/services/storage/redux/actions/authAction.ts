@@ -10,22 +10,26 @@ type AuthProps = {
 
 export const loginUser = ({ email, password }: AuthProps) => {
   return async (dispatch: any) => {
-    const result = await fetch(`${BASE_URL}/signin`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        email,
-        password,
-      }),
-    });
+    try {
+      const result = await fetch(`${BASE_URL}/signin`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+      });
 
-    const data = await result.json();
+      const data = await result.json();
 
-    dispatch({
-      type: LOGIN_USER_SUCCESS,
-      payload: data.data,
-    });
+      dispatch({
+        type: LOGIN_USER_SUCCESS,
+        payload: data?.data ?? null,
+      });
+    } catch (e: unknown) {
+      throw new Error(`POST to login a user failed with ${e}`);
+    }
   };
 };
